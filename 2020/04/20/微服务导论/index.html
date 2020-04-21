@@ -13,11 +13,13 @@
 <meta property="og:site_name" content="Lzzz的博客">
 <meta property="og:description" content="微服务导论什么是微服务 ​    当我们描述一个具体事物时其实很容易给出定义，比如我们可以外形的角度来描述什么是“猫”：头圆、颜面部短，前肢五指，后肢四趾，趾端具锐利而弯曲的爪，爪能伸缩。我们甚至可以拿出照片来解释这就是猫。与之相反我们很难描述一个抽象事物，比如我们很难解释什么是“爱情”，生活中我们可以用类比的方式来描述什么一个抽象事物，比如说“爱情”像什么什么一样。但是当描述一种全新的技术术语时">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://beancookie.github.io/images/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%AE%BA-01.png">
 <meta property="article:published_time" content="2020-04-20T10:53:59.000Z">
-<meta property="article:modified_time" content="2020-04-21T02:11:26.375Z">
+<meta property="article:modified_time" content="2020-04-21T05:40:25.124Z">
 <meta property="article:author" content="LuZhong">
 <meta property="article:tag" content="微服务">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beancookie.github.io/images/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%AE%BA-01.png">
     
     
         
@@ -106,7 +108,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#微服务导论"><span class="toc-number">1.</span> <span class="toc-text">微服务导论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是微服务"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务不是什么"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">微服务不是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#扩展立方体和服务"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">扩展立方体和服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务作为模块化的一种形式"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">微服务作为模块化的一种形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#每个服务都拥有自己的数据库"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">每个服务都拥有自己的数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当谈论微服务时我们在谈论些什么"><span class="toc-number">1.0.2.</span> <span class="toc-text">当谈论微服务时我们在谈论些什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务相关的技术问题有很多"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">微服务相关的技术问题有很多</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#再谈论问题之前如何达成一定的共识"><span class="toc-number">1.0.3.</span> <span class="toc-text">再谈论问题之前如何达成一定的共识</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#微服务导论"><span class="toc-number">1.</span> <span class="toc-text">微服务导论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是微服务"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务不是什么"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">微服务不是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#扩展立方体和服务"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">扩展立方体和服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务作为模块化的一种形式"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">微服务作为模块化的一种形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#每个服务都拥有自己的数据库"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">每个服务都拥有自己的数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当谈论微服务时我们在谈论些什么"><span class="toc-number">1.0.2.</span> <span class="toc-text">当谈论微服务时我们在谈论些什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务相关的技术问题有很多"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">微服务相关的技术问题有很多</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在谈论问题之前如何达成一定的共识"><span class="toc-number">1.0.3.</span> <span class="toc-text">在谈论问题之前如何达成一定的共识</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -159,17 +161,18 @@
 <p>​    当我们描述一个具体事物时其实很容易给出定义，比如我们可以外形的角度来描述什么是“猫”：<em>头圆、颜面部短，前肢五指，后肢四趾，趾端具锐利而弯曲的爪，爪能伸缩</em>。我们甚至可以拿出照片来解释这就是猫。与之相反我们很难描述一个抽象事物，比如我们很难解释什么是“爱情”，生活中我们可以用类比的方式来描述什么一个抽象事物，比如说“爱情”像什么什么一样。但是当描述一种全新的技术术语时我们却依然难以通过类比的方式进行描述。</p>
 </blockquote>
 <h4 id="微服务不是什么"><a href="#微服务不是什么" class="headerlink" title="微服务不是什么"></a>微服务不是什么</h4><p>微服务并不是一个框架更不是某种特定编程语言实现的框架</p>
-<h4 id="扩展立方体和服务"><a href="#扩展立方体和服务" class="headerlink" title="扩展立方体和服务"></a>扩展立方体和服务</h4><p>​    于是我们换一种角度，在这里我们引入一种叫做<strong>扩展立方体</strong>的三维可扩展模型。这个模型描述了扩展应用程序的三种维度。</p>
+<h4 id="扩展立方体和服务"><a href="#扩展立方体和服务" class="headerlink" title="扩展立方体和服务"></a>扩展立方体和服务</h4><p>​    于是我们换一种角度，在这里我们引入一种叫做<a href="https://akfpartners.com/growth-blog/scale-cube" target="_blank" rel="noopener"><strong>扩展立方体</strong></a>的三维可扩展模型。这个模型描述了扩展应用程序的三种维度。</p>
 <ul>
 <li>X轴扩展：在多个实例之间实现请求的负载均衡</li>
 <li>Z轴扩展：根据请求的属性路由请求</li>
 <li>Y轴扩展：根据功能把应用拆分为服务</li>
 </ul>
+<p><img src="https://beancookie.github.io/images/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AF%BC%E8%AE%BA-01.png" alt="https://beancookie.github.io/images/微服务导论-01.png"></p>
 <p>所谓<strong>服务</strong>就是实现了一组相关的功能，并且能够在需要的时候借助X轴或Z轴进行扩展。</p>
 <p><strong>微服务就是把应用程序功能性分解为一组服务的架构风格</strong></p>
 <h4 id="微服务作为模块化的一种形式"><a href="#微服务作为模块化的一种形式" class="headerlink" title="微服务作为模块化的一种形式"></a>微服务作为模块化的一种形式</h4><p>​    在单体应用中模块化通常通常由编程语言(Package)或者编程语言配套(Maven，NPM，Composer)的包管理工具支持。但是随着时间的推移不断地进行版本迭代，单体应用会变得越来越庞大，越来越错综复杂。微服务使用服务而不是Package作为模块化的单元，服务的API定义了服务的边界。</p>
 <h4 id="每个服务都拥有自己的数据库"><a href="#每个服务都拥有自己的数据库" class="headerlink" title="每个服务都拥有自己的数据库"></a>每个服务都拥有自己的数据库</h4><p>​    微服务的一个关键特性是每个服务之间都是松耦合的，这种松耦合不仅仅是开发角度的，更是测试和运维角度的松耦合。</p>
-<h3 id="当谈论微服务时我们在谈论些什么"><a href="#当谈论微服务时我们在谈论些什么" class="headerlink" title="当谈论微服务时我们在谈论些什么"></a>当谈论微服务时我们在谈论些什么</h3><p>​    微服务早在2014年就被<a href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E4%B8%81%C2%B7%E7%A6%8F%E5%8B%92" target="_blank" rel="noopener">Martin Fowler</a>提出，实际上软件行业从来都不缺新概念和新技术。很多人都图示寻找某种银弹来解决问题，但是多少概念都会和<a href="https://wiki.mbalib.com/wiki/%E5%85%89%E7%8E%AF%E6%9B%B2%E7%BA%BF" target="_blank" rel="noopener">光环曲线</a>一样消沉在历史长河之中。无数的新概念都会在过热期被大家广泛讨论和极致吹捧。2016年<a href="https://zh.wikipedia.org/wiki/AlphaGo" target="_blank" rel="noopener">AlphaGo</a>以4:1的战绩碾压李世石，2017又零分柯洁，媒体和民众甚至以为AI纪年已经到来。但是到了2020年随着泡沫消散，人们也也更清楚的认识到了AI的局限性，人工智能其实不是人工的智能，这里的人工实际上是个动词，有足够的人工才能累计出某些领域所谓的智能。泡沫消散的同时也让某些真正有能力有城府的人更深入的使用AI为社会创造价值。<a href="https://index.baidu.com/v2/main/index.html#/trend/%E5%BE%AE%E6%9C%8D%E5%8A%A1?words=%E5%BE%AE%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener">微服务</a>也一样，2017~2018年有些人也以为微服务就是某种银弹，能够解决架构或者团队发展中遇到的瓶颈。</p>
+<h3 id="当谈论微服务时我们在谈论些什么"><a href="#当谈论微服务时我们在谈论些什么" class="headerlink" title="当谈论微服务时我们在谈论些什么"></a>当谈论微服务时我们在谈论些什么</h3><p>​    微服务早在2014年就被<a href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E4%B8%81%C2%B7%E7%A6%8F%E5%8B%92" target="_blank" rel="noopener">Martin Fowler</a>提出，实际上软件行业从来都不缺新概念和新技术。很多人都图示寻找某种银弹来解决问题，但是多少概念都会和<a href="https://wiki.mbalib.com/wiki/%E5%85%89%E7%8E%AF%E6%9B%B2%E7%BA%BF" target="_blank" rel="noopener">光环曲线</a>一样消沉在历史长河之中。无数的新概念都会在过热期被大家广泛讨论和极致吹捧。2016年<a href="https://zh.wikipedia.org/wiki/AlphaGo" target="_blank" rel="noopener">AlphaGo</a>以4:1的战绩碾压李世石，2017又零分柯洁，媒体和民众甚至以为AI纪年已经到来。但是到了2020年随着泡沫消散，人们也也更清楚的认识到了AI的局限性，<a href="https://index.baidu.com/v2/main/index.html#/trend/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD?words=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" target="_blank" rel="noopener">人工智能</a>其实不是人工的智能，这里的人工实际上是个动词，有足够的人工才能累计出某些领域所谓的智能。泡沫消散的同时也让某些真正有能力有城府的人更深入的使用AI为社会创造价值。<a href="https://index.baidu.com/v2/main/index.html#/trend/%E5%BE%AE%E6%9C%8D%E5%8A%A1?words=%E5%BE%AE%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener">微服务</a>也一样，2017~2018年有些人也以为微服务就是某种银弹，能够解决架构或者团队发展中遇到的瓶颈。</p>
 <ul>
 <li><p>这里提出一个比较激进的观点：技术本身是没有经济价值的。</p>
 <blockquote>
@@ -207,7 +210,7 @@
 <li>解决问题的同时会不会引入其他问题</li>
 <li>如何规避或者降低引入问题的风险</li>
 </ol>
-<h3 id="再谈论问题之前如何达成一定的共识"><a href="#再谈论问题之前如何达成一定的共识" class="headerlink" title="再谈论问题之前如何达成一定的共识"></a>再谈论问题之前如何达成一定的共识</h3><blockquote>
+<h3 id="在谈论问题之前如何达成一定的共识"><a href="#在谈论问题之前如何达成一定的共识" class="headerlink" title="在谈论问题之前如何达成一定的共识"></a>在谈论问题之前如何达成一定的共识</h3><blockquote>
 <p>​    生活中人与人之间的交流其实充满了很多的潜台词，比如说：有同事问我<em>百家湖新开的海底捞怎么样？</em>。这句话实际上包含了很多信息：大家都知道海底捞是火锅而不是烧烤，我们也大概是知道百家湖是个商圈和它的大概位置。生活中肯定也会存在很多因为无法理解彼此潜台词而造成讨论了半天，结果是鸡同鸭讲，浪费了很多时间也没有实质性的收获。</p>
 </blockquote>
 <p>​    当我们讨论一个新的技术概念的时候可能会造成更多的误解，所以在讨论之前我们试图能够达成某种共识，比如我们在讨论服务单体泥潭之前我们应该理解单体应用随着版本的迭代会产生一些问题，在讨论服务拆分之前我们要能够尝试理解服务拆分的必要性，以及为什么服务需要拥有独立的数据库。我们会一直采用上文对一系列技术暗线的总结，在讨论具体技术之前达成一定的共识或者能够从某种角度理解这些新的概念。</p>
@@ -236,7 +239,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#微服务导论"><span class="toc-number">1.</span> <span class="toc-text">微服务导论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是微服务"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务不是什么"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">微服务不是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#扩展立方体和服务"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">扩展立方体和服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务作为模块化的一种形式"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">微服务作为模块化的一种形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#每个服务都拥有自己的数据库"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">每个服务都拥有自己的数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当谈论微服务时我们在谈论些什么"><span class="toc-number">1.0.2.</span> <span class="toc-text">当谈论微服务时我们在谈论些什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务相关的技术问题有很多"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">微服务相关的技术问题有很多</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#再谈论问题之前如何达成一定的共识"><span class="toc-number">1.0.3.</span> <span class="toc-text">再谈论问题之前如何达成一定的共识</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#微服务导论"><span class="toc-number">1.</span> <span class="toc-text">微服务导论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是微服务"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务不是什么"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">微服务不是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#扩展立方体和服务"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">扩展立方体和服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务作为模块化的一种形式"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">微服务作为模块化的一种形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#每个服务都拥有自己的数据库"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">每个服务都拥有自己的数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当谈论微服务时我们在谈论些什么"><span class="toc-number">1.0.2.</span> <span class="toc-text">当谈论微服务时我们在谈论些什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#微服务相关的技术问题有很多"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">微服务相关的技术问题有很多</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在谈论问题之前如何达成一定的共识"><span class="toc-number">1.0.3.</span> <span class="toc-text">在谈论问题之前如何达成一定的共识</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
