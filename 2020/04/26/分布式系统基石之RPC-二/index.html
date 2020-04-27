@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://beancookie.github.io/images/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%9F%B3%E4%B9%8BRPC-04.png">
 <meta property="og:image" content="https://beancookie.github.io/images/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%9F%B3%E4%B9%8BRPC-05.png">
 <meta property="article:published_time" content="2020-04-26T11:58:16.000Z">
-<meta property="article:modified_time" content="2020-04-27T08:44:17.747Z">
+<meta property="article:modified_time" content="2020-04-27T09:02:29.827Z">
 <meta property="article:author" content="LuZhong">
 <meta property="article:tag" content="RPC">
 <meta name="twitter:card" content="summary">
@@ -211,6 +211,10 @@
 </ul>
 <h3 id="调用方式"><a href="#调用方式" class="headerlink" title="调用方式"></a>调用方式</h3><p><img src="https://beancookie.github.io/images/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%9F%B3%E4%B9%8BRPC-05.png" alt="https://beancookie.github.io/images/分布式系统基石之RPC-05.png"></p>
 <ul>
+<li><input checked="" disabled="" type="checkbox"> <p><a href="https://github.com/BeanCookie/grpc-python" target="_blank" rel="noopener">https://github.com/BeanCookie/grpc-python</a></p>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <p><a href="https://github.com/BeanCookie/grpc-java" target="_blank" rel="noopener">https://github.com/BeanCookie/grpc-java</a></p>
+</li>
 <li><p>同步阻塞式</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> WaterCompanyGrpc.WaterCompanyBlockingStub futureStub;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">WaterBlockingClient</span><span class="params">(Channel channel)</span> </span>&#123;</span><br><span class="line">    futureStub = WaterCompanyGrpc.newBlockingStub(channel);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">butWater</span><span class="params">(<span class="keyword">float</span> price)</span> </span>&#123;</span><br><span class="line">    WaterRequest request = WaterRequest.newBuilder().setPrice(price).build();</span><br><span class="line">    WaterReply waterReply;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        waterReply = futureStub.buyWater(request);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (StatusRuntimeException e) &#123;</span><br><span class="line">        logger.log(Level.WARNING, <span class="string">"RPC failed: &#123;0&#125;"</span>, e.getStatus());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
