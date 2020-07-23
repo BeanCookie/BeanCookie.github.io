@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://beancookie.github.io/images/FlinkDataStreamAPI%E7%BC%96%E7%A8%8B-03.png">
 <meta property="og:image" content="https://beancookie.github.io/images/FlinkDataStreamAPI%E7%BC%96%E7%A8%8B-04.png">
 <meta property="article:published_time" content="2020-07-17T02:13:18.000Z">
-<meta property="article:modified_time" content="2020-07-22T11:48:38.718Z">
+<meta property="article:modified_time" content="2020-07-23T08:35:51.194Z">
 <meta property="article:author" content="LuZhong">
 <meta property="article:tag" content="Flink">
 <meta name="twitter:card" content="summary">
@@ -113,7 +113,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#流处理基础概念"><span class="toc-number">1.</span> <span class="toc-text">流处理基础概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flink-DataStream-API-概览"><span class="toc-number">2.</span> <span class="toc-text">Flink DataStream API 概览</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#流处理基础概念"><span class="toc-number">1.</span> <span class="toc-text">流处理基础概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flink-DataStream-API-概览"><span class="toc-number">2.</span> <span class="toc-text">Flink DataStream API 概览</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#项目实践"><span class="toc-number">2.1.</span> <span class="toc-text">项目实践</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#参考"><span class="toc-number">2.2.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -182,6 +182,13 @@
 <p><img src="https://beancookie.github.io/images/FlinkDataStreamAPI%E7%BC%96%E7%A8%8B-04.png" alt="https://beancookie.github.io/images/FlinkDataStreamAPI编程-04.png"></p>
 <p>基本 DataStream 对象上的 allWindow 与 KeyedStream 上的 Window 操作的对比如图5所示。为了能够在多个并发实例上并行的对数据进行处理，我们需要通过 KeyBy 将数据进行分组。KeyBy 和 Window 操作都是对数据进行分组，但是 KeyBy 是在水平分向对流进行切分，而 Window 是在垂直方式对流进行切分。</p>
 <p>使用 KeyBy 进行数据切分之后，后续算子的每一个实例可以只处理特定 Key 集合对应的数据。除了处理本身外，Flink 中允许算子维护一部分状态（State），在KeyedStream 算子的状态也是可以分布式存储的。由于 KeyBy 是一种确定的数据分配方式（下文将介绍其它分配方式），因此即使发生 Failover 作业重启，甚至发生了并发度的改变，Flink 都可以重新分配 Key 分组并保证处理某个 Key 的分组一定包含该 Key 的状态，从而保证一致性。</p>
+<h5 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h5><blockquote>
+<p><a href="https://github.com/BeanCookie/learn-flink" target="_blank" rel="noopener">https://github.com/BeanCookie/learn-flink</a></p>
+</blockquote>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><blockquote>
+<p><a href="https://ververica.cn/developers/apache-flink-basic-zero-iii-datastream-api-programming/" target="_blank" rel="noopener">https://ververica.cn/developers/apache-flink-basic-zero-iii-datastream-api-programming/</a></p>
+<p><a href="https://www.bilibili.com/video/av47970985" target="_blank" rel="noopener">https://www.bilibili.com/video/av47970985</a></p>
+</blockquote>
 
   </div>
 </article>
@@ -207,7 +214,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#流处理基础概念"><span class="toc-number">1.</span> <span class="toc-text">流处理基础概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flink-DataStream-API-概览"><span class="toc-number">2.</span> <span class="toc-text">Flink DataStream API 概览</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#流处理基础概念"><span class="toc-number">1.</span> <span class="toc-text">流处理基础概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flink-DataStream-API-概览"><span class="toc-number">2.</span> <span class="toc-text">Flink DataStream API 概览</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#项目实践"><span class="toc-number">2.1.</span> <span class="toc-text">项目实践</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#参考"><span class="toc-number">2.2.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
