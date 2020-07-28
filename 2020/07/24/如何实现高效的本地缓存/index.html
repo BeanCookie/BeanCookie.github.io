@@ -17,8 +17,11 @@
 <meta property="og:image" content="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-02.png">
 <meta property="og:image" content="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-03.png">
 <meta property="og:image" content="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-04.png">
+<meta property="og:image" content="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-05.png">
+<meta property="og:image" content="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-06.png">
+<meta property="og:image" content="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-07.png">
 <meta property="article:published_time" content="2020-07-24T01:42:04.000Z">
-<meta property="article:modified_time" content="2020-07-28T06:28:44.563Z">
+<meta property="article:modified_time" content="2020-07-28T06:57:29.820Z">
 <meta property="article:author" content="LuZhong">
 <meta property="article:tag" content="Caffine">
 <meta name="twitter:card" content="summary">
@@ -111,7 +114,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么需要缓存"><span class="toc-number">1.</span> <span class="toc-text">为什么需要缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#硬件方面"><span class="toc-number">1.1.</span> <span class="toc-text">硬件方面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#算法方面"><span class="toc-number">1.2.</span> <span class="toc-text">算法方面</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何将时间复杂度降低到O-1"><span class="toc-number">2.</span> <span class="toc-text">如何将时间复杂度降低到O(1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何尽量避免丢失热点数据"><span class="toc-number">3.</span> <span class="toc-text">如何尽量避免丢失热点数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LRU和LFU相结合"><span class="toc-number">4.</span> <span class="toc-text">LRU和LFU相结合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caffine"><span class="toc-number">5.</span> <span class="toc-text">Caffine</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caffine与Spring"><span class="toc-number">6.</span> <span class="toc-text">Caffine与Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring与Jetcache"><span class="toc-number">7.</span> <span class="toc-text">Spring与Jetcache</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么需要缓存"><span class="toc-number">1.</span> <span class="toc-text">为什么需要缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#硬件方面"><span class="toc-number">1.1.</span> <span class="toc-text">硬件方面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#算法方面"><span class="toc-number">1.2.</span> <span class="toc-text">算法方面</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何将时间复杂度降低到O-1"><span class="toc-number">2.</span> <span class="toc-text">如何将时间复杂度降低到O(1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何尽量避免丢失热点数据"><span class="toc-number">3.</span> <span class="toc-text">如何尽量避免丢失热点数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LRU和LFU相结合"><span class="toc-number">4.</span> <span class="toc-text">LRU和LFU相结合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caffine"><span class="toc-number">5.</span> <span class="toc-text">Caffine</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jetcache"><span class="toc-number">6.</span> <span class="toc-text">Jetcache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Links"><span class="toc-number">7.</span> <span class="toc-text">Links</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -192,7 +195,21 @@
 <p>为了优化<strong>LRU</strong>的局限性<strong>LFU</strong>利用额外的空间记录每个数据的使用频率，然后选出频率最低进行淘汰。这样就避免了<strong>LRU</strong>不能保障周期性热点数据的问题。但是鱼翅和熊掌不可兼得，比如有部新剧出来了，我们使用 LFU 给他缓存下来，这部新剧在这几天大概访问了几亿次，这个访问频率也在我们的 LFU 中记录了几亿次。但是新剧总会过气的，比如一个月之后这个新剧的前几集其实已经过气了，但是他的访问量的确是太高了，其他的电视剧根本无法淘汰这个新剧，所以在这种模式下是有局限性。</p>
 </li>
 </ul>
-<h4 id="Caffine"><a href="#Caffine" class="headerlink" title="Caffine"></a>Caffine</h4><h4 id="Caffine与Spring"><a href="#Caffine与Spring" class="headerlink" title="Caffine与Spring"></a>Caffine与Spring</h4><h4 id="Spring与Jetcache"><a href="#Spring与Jetcache" class="headerlink" title="Spring与Jetcache"></a>Spring与Jetcache</h4>
+<h4 id="Caffine"><a href="#Caffine" class="headerlink" title="Caffine"></a>Caffine</h4><p>在现有算法的局限性下，会导致缓存数据的命中率或多或少的受损，而命中略又是缓存的重要指标。HighScalability网站刊登了一篇文章，由前Google工程师发明的<strong>Window TinyLfu</strong>一种现代的缓存 。Caffine Cache就是基于此算法而研发。<strong>Caffeine</strong>因使用 <strong>Window TinyLfu</strong> 回收策略，提供了一个<strong>近乎最佳的命中率</strong>。</p>
+<p><img src="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-05.png" alt="如何实现高效的本地缓存-05"></p>
+<p>TinyLFU维护了近期访问记录的频率信息，作为一个过滤器，当新记录来时，只有满足TinyLFU要求的记录才可以被插入缓存。如前所述，作为现代的缓存，它需要解决两个挑战</p>
+<ol>
+<li>一个是如何避免维护频率信息的高开销</li>
+<li>另一个是如何反应随时间变化的访问模式</li>
+</ol>
+<p>首先来看前者，TinyLFU借助了数据流Sketching技术，Count-Min Sketch显然是解决这个问题的有效手段，它可以用小得多的空间存放频率信息，而保证很低的False Positive Rate。但考虑到第二个问题，就要复杂许多了，因为我们知道，任何Sketching数据结构如果要反应时间变化都是一件困难的事情，在Bloom Filter方面，我们可以有Timing Bloom Filter，但对于CMSketch来说，如何做到Timing CMSketch就不那么容易了。TinyLFU采用了一种基于滑动窗口的时间衰减设计机制，借助于一种简易的reset操作：每次添加一条记录到Sketch的时候，都会给一个计数器上加1，当计数器达到一个尺寸W的时候，把所有记录的Sketch数值都除以2，该reset操作可以起到衰减的作用 。</p>
+<p><img src="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-06.png" alt="如何实现高效的本地缓存-06"></p>
+<p><img src="https://beancookie.github.io/images/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98-07.png" alt="如何实现高效的本地缓存-07"></p>
+<h4 id="Jetcache"><a href="#Jetcache" class="headerlink" title="Jetcache"></a>Jetcache</h4><p>实际项目中<strong>Caffeine</strong>可以满足本地缓存，但是在分布式环境下最简单的方式还是使用<strong>Redis</strong>进行分布式的缓存，在实际项目中可以使用<strong>Jetcache</strong>提供的统一API和注解来简化缓存的使用，也可以必要时刻轻松转换为分布式的缓存。</p>
+<h4 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h4><p><a href="http://highscalability.com/blog/2016/1/25/design-of-a-modern-cache.html" target="_blank" rel="noopener">http://highscalability.com/blog/2016/1/25/design-of-a-modern-cache.html</a></p>
+<p><a href="https://github.com/ben-manes/caffeine" target="_blank" rel="noopener">https://github.com/ben-manes/caffeine</a></p>
+<p><a href="https://github.com/alibaba/jetcache/wiki/Home_CN" target="_blank" rel="noopener">https://github.com/alibaba/jetcache/wiki/Home_CN</a></p>
+
   </div>
 </article>
 
@@ -217,7 +234,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么需要缓存"><span class="toc-number">1.</span> <span class="toc-text">为什么需要缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#硬件方面"><span class="toc-number">1.1.</span> <span class="toc-text">硬件方面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#算法方面"><span class="toc-number">1.2.</span> <span class="toc-text">算法方面</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何将时间复杂度降低到O-1"><span class="toc-number">2.</span> <span class="toc-text">如何将时间复杂度降低到O(1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何尽量避免丢失热点数据"><span class="toc-number">3.</span> <span class="toc-text">如何尽量避免丢失热点数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LRU和LFU相结合"><span class="toc-number">4.</span> <span class="toc-text">LRU和LFU相结合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caffine"><span class="toc-number">5.</span> <span class="toc-text">Caffine</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caffine与Spring"><span class="toc-number">6.</span> <span class="toc-text">Caffine与Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring与Jetcache"><span class="toc-number">7.</span> <span class="toc-text">Spring与Jetcache</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么需要缓存"><span class="toc-number">1.</span> <span class="toc-text">为什么需要缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#硬件方面"><span class="toc-number">1.1.</span> <span class="toc-text">硬件方面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#算法方面"><span class="toc-number">1.2.</span> <span class="toc-text">算法方面</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何将时间复杂度降低到O-1"><span class="toc-number">2.</span> <span class="toc-text">如何将时间复杂度降低到O(1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何尽量避免丢失热点数据"><span class="toc-number">3.</span> <span class="toc-text">如何尽量避免丢失热点数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LRU和LFU相结合"><span class="toc-number">4.</span> <span class="toc-text">LRU和LFU相结合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Caffine"><span class="toc-number">5.</span> <span class="toc-text">Caffine</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jetcache"><span class="toc-number">6.</span> <span class="toc-text">Jetcache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Links"><span class="toc-number">7.</span> <span class="toc-text">Links</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
